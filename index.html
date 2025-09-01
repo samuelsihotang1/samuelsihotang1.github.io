@@ -1,734 +1,1029 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 <head>
-	<title>Samuel - Personal Website</title>
-	<link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16" />
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<meta content="Samuel - Personal Website" name="description" />
-	<meta content="" name="keywords" />
-	<meta content="Samuel Sihotang" name="author" />
-	<!-- CSS Files
-    ================================================== -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap" />
-	<link href="css/plugins.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<link href="css/custom-style-4.css" rel="stylesheet" type="text/css" />
-	<style>
-		:root {
-			--primary-color: #000000;
-			--primary-color-rgb: 0, 0, 0;
-		}
-	</style>
-	<link href="css/coloring.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+
+  <!-- Page Title -->
+  <title>Samuel's Portfolio</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Samuel's Portfolio">
+  <meta name="keywords"
+    content="resume, portfolio, personal page, cv, one page, responsive, html5, css3, creative, clean">
+  <meta name="author" content="Samuel Sihotang">
+
+  <!-- Viewport Meta-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Template Favicon & Icons Start -->
+  <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="img/favicon/manifest.webmanifest">
+  <!-- Template Favicon & Icons End -->
+
+  <!-- Facebook Metadata Start -->
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:title" content="Samuel's Portfolio">
+  <meta property="og:description" content="Samuel's Portfolio">
+  <!-- Facebook Metadata End -->
+
+  <!-- Template Styles Start -->
+  <link rel="stylesheet" href="css/loaders/loader.css">
+  <link rel="stylesheet" type="text/css" href="css/plugins.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Template Styles End -->
+
+  <!-- Custom Browser Color Start -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#dcdce7">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#111111">
+  <meta name="msapplication-navbutton-color" content="#111111">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- Custom Browser Color End -->
 </head>
 
-<body class="onepage">
-	<div id="wrapper">
-		<!-- header begin -->
-		<header class="transparent header-light">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="de-flex sm-pt10">
-							<div class="de-flex-col">
-								<div class="de-flex-col">
-									<!-- logo begin -->
-									<div id="logo">
-										<a href="/">
-											<img alt="" class="logo" src="images/logo-6.png" />
-											<img alt="" class="logo-2" src="images/logo-6.png" />
-										</a>
-									</div>
-									<!-- logo close -->
-								</div>
-							</div>
-							<div class="de-flex-col header-col-right">
-								<ul id="mainmenu">
-									<li>
-										<a class="active" href="#top">Home<span></span></a>
-									</li>
-									<li>
-										<a href="#section-about">About me<span></span></a>
-									</li>
-									<li>
-										<a href="#section-services">What I Do<span></span></a>
-									</li>
-									<li>
-										<a href="#section-portfolio">Portfolio<span></span></a>
-									</li>
-									<li>
-										<a href="#section-resume">My Resume<span></span></a>
-									</li>
-									<li>
-										<a href="#section-contact">Contact Me<span></span></a>
-									</li>
-								</ul>
-								<div class="menu_side_area">
-									<span id="menu-btn"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- header close -->
-		<!-- content begin -->
-		<div class="no-bottom no-top" id="content">
-			<div id="top"></div>
+<body>
 
-			<!-- page preloader begin -->
-			<div id="preloader">
-				<div class="preloader1"></div>
-			</div>
-			<!-- page preloader close -->
+  <!-- Loader Start -->
+  <div id="loader" class="loader">
+    <div id="loaderContent" class="loader__content">
+      <div class="loader__shadow"></div>
+      <div class="loader__box"></div>
+    </div>
+  </div>
+  <!-- Loader End -->
 
-			<!-- float text begin -->
-			<div class="float-text">
-				<div class="de_social-icons">
-					<a href="src/CV_SamuelChristyAngieSihotang.pdf" target="_blank" rel="noopener noreferrer"><i class="fa fa-file-text-o fa-lg"></i></a>
-					<a href="https://www.linkedin.com/in/samuelsihotang1" target="_blank"><i
-							class="fa fa-linkedin fa-lg"></i></a>
-					<a href="https://github.com/samuelsihotang1" target="_blank"><i class="fa fa-github fa-lg"></i></a>
-					<a href="https://www.instagram.com/samuelsihotang.id" target="_blank"><i
-							class="fa fa-instagram fa-lg"></i></a>
-				</div>
-				<span>Follow Me</span>
-			</div>
-			<!-- float text close -->
+  <!-- Header Start -->
+  <header id="header" class="header d-flex justify-content-between">
 
-			<section aria-label="section" class="jarallax no-top-md no-bottom sm-pt-120 overflow-hidden">
-				<img src="images/background/l11.jpg" class="jarallax-img" alt="" />
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-md-6">
-							<h5 class="s1 wow fadeInUp" data-wow-delay=".4s">
-								Welcome to My Website
-							</h5>
-							<div class="spacer-10"></div>
-							<div class="h1 wow fadeInUp text-title" data-wow-delay=".6s">
-								Hi, I'm <span class="id-color">Samuel Sihotang</span><br />a
-								<div class="typed-strings">
-									<p>Back-End Developer</p>
-									<p>Front-End Developer</p>
-									<p>Mobile App Developer</p>
-									<p>UI/UX Designer</p>
-								</div>
-								<div class="typed"></div>
-							</div>
-							<ul class="list_location wow fadeInUp" data-wow-delay=".8s">
-								<li>
-									<span>PT Tera Multi Wahana</span>IT Developer Intern
-								</li>
-								<li>
-									<span>PT Infosys Solusi Terpadu</span>Backend Developer Intern
-								</li>
-								<li>
-									<span>Institut Teknologi Del</span>Bachelor Degree in Information System (3.65/4.00)
-								</li>
-							</ul>
-							<div class="spacer-10"></div>
-							<a class="btn-main wow fadeInUp" data-wow-delay=".6s" href="#section-resume">My Resume</a>
-						</div>
-						<div class="col-md-6">
-							<img src="images/misc/8.png" class="img-fluid wow fadeInUp" data-wow-delay=".8s" alt=""
-								style="pointer-events: none" />
-						</div>
-					</div>
-				</div>
-				<a href="#section-about" class="mouse-icon-click scroll-to wow fadeInUp" data-wow-delay=".8s">
-					<span class="mouse fadeScroll relative" data-scroll-speed="10">
-						<span class="scroll"></span>
-					</span>
-				</a>
-				<div class="de-gradient-edge-bottom"></div>
-			</section>
-			<section id="section-about" style="padding-bottom: 0 !important;">
-				<div class="container relative">
-					<div class="row">
-						<div class="col-md-12 text-center wow fadeInUp">
-							<h2>About Me</h2>
-							<div class="space-border"></div>
-						</div>
-						<div class="col-md-8 offset-md-2 text-center wow fadeInUp">
-							<p>
-								Experienced in working on more than 8 development projects and honed my skills as a
-								developer. My expertise spans the full development lifecycle, from creating secure
-								back-end APIs that communicate directly with databases, to building responsive web
-								applications for data management and reporting.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="section-services" class="no-bottom">
-				<div class="container relative">
-					<div class="row">
-						<div class="col-md-12 text-center wow fadeInUp">
-							<h2>What I Do</h2>
-							<div class="space-border"></div>
-						</div>
-						<div class="spacer-single"></div>
-						<div class="row">
-							<div class="col-lg-4 wow fadeIn" data-wow-delay=".2s">
-								<div class="de-card-v1">
-									<div class="d-inner">
-										<i class="icon_globe-2 id-color"></i>
-										<div class="text">
-											<h3>Web Development</h3>
-											Developed 3 websites using PHP (Laravel) and 1 website with Go (Gin),
-											integrating CSS (Tailwind) for frontend design and creating secure
-											middleware for API calls in the backend
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeIn" data-wow-delay=".4s">
-								<div class="de-card-v1">
-									<div class="d-inner">
-										<i class="icon_mobile id-color"></i>
-										<div class="text">
-											<h3>Mobile & Desktop App Development</h3>
-											Developed a News Application using Dart (Flutter) to fetch and display data
-											from a news API and developed Document Management System for corporate
-											use with C# (.NET) and Dart (Flutter).
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeIn" data-wow-delay=".6s">
-								<div class="de-card-v1">
-									<div class="d-inner">
-										<i class="icon_pencil-edit_alt id-color"></i>
-										<div class="text">
-											<h3>UI/UX Design</h3>
-											Designed an e-learning platform
-											facilitating online communication and
-											remote learning interactions between
-											teachers and students
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="section-portfolio" class="no-bottom">
-				<div class="container relative">
-					<div class="row">
-						<div class="col-md-12 text-center wow fadeInUp">
-							<h2>Portfolio</h2>
-							<div class="space-border"></div>
-						</div>
-					</div>
-					<div id="gallery" class="row sequence">
-						<div class="col-md-4 item">
-							<a class="de_modal wow"
-								href="https://github.com/samuelsihotang1/MandiriNews-App-by-Samuel-Sihotang"
-								target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											MandiriNews App
-											<br />
-											<p class="little-font">Mobile App</p>
-										</h3>
-										<!-- <h5 class="d-tag">Mobile App</h5> -->
-									</div>
-									<img src="images/portfolio/news_app.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 item">
-							<a class="de_modal wow"
-								href="https://github.com/samuelsihotang1/Mavie-Cinema" target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											Mavie Cinema
-											<br />
-											<p class="little-font">Website</p>
-										</h3>
-										<!-- <h5 class="d-tag">Website</h5> -->
-									</div>
-									<img src="images/portfolio/mavie_cinema.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
+    <!-- Navigation Menu Start -->
+    <div class="header__navigation">
+      <nav id="menu" class="menu">
+        <ul class="menu__list d-flex justify-content-start">
+          <li class="menu__item">
+            <a class="menu__link btn" href="#home">
+              <span class="menu__caption">Home</span>
+              <i class="ph-bold ph-house-simple"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#portfolio">
+              <span class="menu__caption">Portfolio</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#about">
+              <span class="menu__caption">About Me</span>
+              <i class="ph-bold ph-user"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#resume">
+              <span class="menu__caption">Resume</span>
+              <i class="ph-bold ph-article"></i>
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link btn" href="#contact">
+              <span class="menu__caption">Contact</span>
+              <i class="ph-bold ph-envelope"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Navigation Menu End -->
 
-						<div class="col-md-4 item">
-							<a class="de_modal wow" href="https://bit.ly/MatauliGoApp" target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											MatauliGo App
-											<br />
-											<p class="little-font">Design</p>
-										</h3>
-										<!-- <h5 class="d-tag">Design</h5> -->
-									</div>
-									<img src="images/portfolio/matauli.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 item">
-							<a class="de_modal wow"
-								href="https://github.com/samuelsihotang1/Bebras-Help-Desk-Application" target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											Bebras Help Desk Application
-											<br />
-											<p class="little-font">Website</p>
-										</h3>
-										<!-- <h5 class="d-tag">Website</h5> -->
-									</div>
-									<img src="images/portfolio/bebras.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 item">
-							<a class="de_modal wow" href="https://github.com/samuelsihotang1/Laundry-Del"
-								target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											Laundry Del
-											<br />
-											<p class="little-font">Website</p>
-										</h3>
-										<!-- <h5 class="d-tag">Website</h5> -->
-									</div>
-									<img src="images/portfolio/laundry_del.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 item">
-							<a class="de_modal wow" href="https://github.com/samuelsihotang1/Task-5-PBI-Rakamin-Academy"
-								target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											Profile Web Application
-											<br />
-											<p class="little-font">Website</p>
-										</h3>
-										<!-- <h5 class="d-tag">Website</h5> -->
-									</div>
-									<img src="images/portfolio/golang.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 item">
-							<a class="de_modal wow" href="https://github.com/samuelsihotang1/Cafetaria" target="_blank">
-								<div class="card-image-1 mod-c" data-tilt>
-									<div class="d-text">
-										<h3>
-											Cafetaria
-											<br />
-											<p class="little-font">Website</p>
-										</h3>
-										<!-- <h5 class="d-tag">Website</h5> -->
-									</div>
-									<img src="images/portfolio/cafetaria.png" class="img-fluid" alt="" />
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="section-resume" style="padding-bottom: 0 !important;">
-				<div class="container relative">
-					<div class="row">
-						<div class="col-md-12 text-center wow fadeInUp">
-							<h2>My Resume</h2>
-							<div class="space-border" style="margin-bottom: 20px !important;"></div>
-							<!-- <div class="spacer-10"></div> -->
-							<a class="btn-main wow fadeInUp" href="src/CV_SamuelChristyAngieSihotang.pdf" target="_blank" rel="noopener noreferrer"
-								style="margin-bottom: 20px !important;">Download</a>
-						</div>
-					</div>
-					<div class="row gh-5">
-						<div class="col-lg-6 wow fadeInUp">
-							<div class="p-4">
-								<h3 class="s_border">Work Experiences</h3>
-								<ul class="d_timeline">
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Aug 2024 - Jun 2025
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">IT Developer Intern</span>
-											<span class="d_company">PT Tera Multi Wahana</span>
-											• Developed a robust API using C# and the .NET
-											Framework to facilitate direct communication with the database, providing
-											endpoints for front-end consumption. <br />
-											• Built a comprehensive web application with Dart and Flutter, featuring
-											pages for data processing and reporting that interact
-											seamlessly with the back-end API. <br />
-											• Created a desktop application using XAML for data processing and
-											management.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Jun 2024 - Aug 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Backend Developer Intern</span>
-											<span class="d_company">PT Infosys Solusi Terpadu</span>
-											• Backend Developer Intern Engineered middleware using Java to process and
-											manage data within the Software AG platform. <br />
-											• Implemented a crucial data validation layer to enhance the security and
-											integrity of the financial program.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Jan 2024 - Apr 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Object-Oriented Programming Teaching Assistant</span>
-											<span class="d_company">Insitut Teknologi Del</span>
-											Assist students in understanding
-											object-based programming concepts in java,
-											such as the use of model and driver.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Mar 2024 - Apr 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Project-Based Virtual Intern : Fullstack Developer
-												BTPN Syariah x Rakamin Academy</span>
-											<span class="d_company">BTPN Syariah</span>
-											• Developed a web application using the
-											Gin framework in GO language, integrating
-											MySQL database and JWT for user
-											authentication. <br />
-											• Implemented CRUD functionalities for
-											user and photo management, allowing users
-											to register, login, upload, edit photos,
-											and manage profiles
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Mar 2024 - Apr 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Project-Based Virtual Intern : Mobile Application
-												Developer Bank Mandiri x Rakamin Academy</span>
-											<span class="d_company">PT Bank Mandiri (Persero) Tbk.
-											</span>
-											• Developed Mandiri News App, a
-											Flutter-based mobile application.
-											<br />
-											• Integrated News API to provide users
-											with current news articles for a
-											convenient news reading experience.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Sep 2023 - Dec 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Algorithms and Data Structures Teaching
-												Assistant</span>
-											<span class="d_company">Insitut Teknologi Del</span>
-											Teach about data structures, such as
-											linked list, stack, tree, graph, and heap
-											so that students can create more complex
-											algorithms.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Jun 2023 - Aug 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Full-Stack Developer Intern </span>
-											<span class="d_company">Bebras Biro Insitut Teknologi Del</span>
-											• Design and implement front-end web pages
-											with clean code structure, following UI/UX
-											design principles.
-											<br />
-											• Developed a back-end program to manage
-											HTTP requests from the front-end and API
-											while facilitating interaction with the
-											database.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Jan 2023 - May 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Procedural Programming Teaching
-												Assistant</span><span class="d_company">Insitut Teknologi Del</span>•
-											Teach procedural programming concepts
-											using the C programming language so that
-											students can create simple programs.
-											<br />
-											• Identifying the source of errors
-											encountered by students in their programs,
-											and guide them to solve it.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Mar 2023 - Apr 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Book Designer</span><span class="d_company">The Book
-												"Semangat Uli Meraih
-												Mimpi"</span>• Design the visual elements of the book,
-											encompassing layout, font selection, and
-											cover imagery.
-											<br />
-											• Modify illustrations from other
-											designers to align seamlessly with the
-											content presented within the book.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Oct 2022 - Nov 2022
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Committee of Proceedings/Program
-												Book</span><span class="d_company">The 2022 IEEE International
-												Conference of SNIKOM</span>Designing the overall visuals of the
-											book, including tables, font size, font
-											type, layout, and cover image.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Sep 2022 - Dec 2022
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Visual Programming Teaching
-												Assistant</span><span class="d_company">Insitut Teknologi
-												Del</span>Sharpen students' computational thinking
-											by creating simple programs without
-											writing code using Flowgorithm.
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-6 wow fadeInUp">
-							<div class="p-4">
-								<h3 class="s_border">Education</h3>
-								<ul class="d_timeline">
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Sep 2021 - Sep 2025
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Bachelor Degree in Information System,
-												3.65/4.00</span>
-											<span class="d_company">Institut Teknologi Del</span>
-											• Related Coursework: Visual Programming,
-											Procedural Programming, Object Oriented
-											Programming (OOP), Database, Software
-											Engineering, Algorithm and Data Structure,
-											Discreate Math, Probability and
-											Statistics, Artificial Intelligence, Web
-											Application Programming and Testing,
-											Analysis and Design Systems.
-											<br />
-											• Soft Skill: Educate, Lead and
-											Discipline.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Feb 2024 - Jun 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Certified Independent Study in Web
-												Development & UI UX Design –
-												MSIB</span><span class="d_company">Infinite Learning</span>• Related
-											Coursework: Front End
-											Development, Back End Development, UI UX
-											Design, Cybersecurity, Cloud Computing,
-											Project Management, Product Research
-											<br />
-											• Soft Skill: Collaboration, Communication
-											and Adaptation
-										</p>
-									</li>
-								</ul>
-								<div class="spacer-100"></div>
-								<h3 class="s_border">Organisational Experience</h3>
-								<ul class="d_timeline">
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Sep 2023 - Apr 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Chairman</span><span class="d_company">Association
-												Consultative
-												Assembly</span>Accommodate all aspirations and
-											complaints of colleagues in the
-											association.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Sep 2023 - Apr 2024
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Vice Chairman</span><span class="d_company">Del
-												Programming Club</span>Participate with the chairman in running
-											every Del Programming Club work program.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Dec 2022 - Aug 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Member</span><span class="d_company">Department Of
-												Information And
-												Communication</span>Designing posters, flyers, Instagram
-											posts, and other materials for campus
-											events.
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											Dec 2022 - Sep 2023
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Member</span>
-											<span class="d_company">Participated in training held by Del
-												Programming Club.
-											</span>
-										</p>
-									</li>
-									<li class="d_timeline-item">
-										<h3 class="d_timeline-title">
-											May 2022 - Aug 2025
-										</h3>
-										<p class="d_timeline-text">
-											<span class="d_title">Member</span><span class="d_company">Information
-												Systems Student
-												Association</span>Participate in activities and events
-											organized by the association.
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="section-contact" style="padding-top: 0 !important;" class="jarallax">
-				<div class="de-gradient-edge-top"></div>
-				<img src="images/background/l11.jpg" class="jarallax-img" alt="" />
-				<div class="container z-index-1000">
-					<div class="row">
-						<div class="col-md-12 text-center wow fadeInUp">
-							<h2>Contact Me</h2>
-							<div class="space-border"></div>
-						</div>
-						<div class="col-lg-8 offset-lg-2 wow fadeInUp">
-							<div class="row text-center wow fadeInUp">
-								<div class="col-md-4">
-									<div class="wm-1"></div>
-									<h6>Email</h6>
-									<a href="mailto:samuelsihotang1@gmail" target="_blank">samuelsihotang1@gmail.com</a>
-								</div>
-								<div class="col-md-4">
-									<div class="wm-1"></div>
-									<h6>Phone</h6>
-									<a href="https://wa.me/62895612360693" target="_blank">+62<span
-											class="pl-25"">895</span><span class=" pl-25"">6123</span><span
-											class="pl-25"">60693</span></a
-										>
-									</div>
-									<div class=" col-md-4">
-											<div class="wm-1"></div>
-											<h6>My Social Account</h6>
-											<div class="social-icons" style="float: unset !important">
-												<a href="https://www.linkedin.com/in/samuelsihotang1" target="_blank"><i
-														class="fa fa-linkedin fa-lg"></i></a>
-												<a href="https://github.com/samuelsihotang1" target="_blank"><i
-														class="fa fa-github fa-lg"></i></a>
-												<a href="https://www.instagram.com/samuelsihotang.id" target="_blank"><i
-														class="fa fa-instagram fa-lg"></i></a>
-											</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="de-gradient-edge-bottom"></div>
-			</section>
-		</div>
-		<!-- content close -->
-		<a href="#top" id="back-to-top"></a>
-		<!-- footer begin -->
-		<footer>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6" style="width: 55% !important">
-						<a href="#section-contact" style="pointer-events: none">
-							<span class="copy">Copyright © 2025 by Samuel Christy Angie Sihotang |
-								All Rights Reserved</span>
-						</a>
-					</div>
-					<div class="col-md-6" style="width: 45% !important">
-						<div class="social-icons">
-							<a href="https://www.linkedin.com/in/samuelsihotang1" target="_blank"><i
-									class="fa fa-linkedin fa-lg"></i></a>
-							<a href="https://github.com/samuelsihotang1" target="_blank"><i
-									class="fa fa-github fa-lg"></i></a>
-							<a href="https://www.instagram.com/samuelsihotang.id" target="_blank"><i
-									class="fa fa-instagram fa-lg"></i></a>
-							<a href="src/CV_SamuelChristyAngieSihotang.pdf" target="_blank" rel="noopener noreferrer"><i
-									class="fa fa-file-text-o fa-lg"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- footer close -->
-	</div>
-	<!-- Javascript Files
-    ================================================== -->
-	<script src="js/plugins.js"></script>
-	<script src="js/designesia.js"></script>
-	<script>
-		jQuery(document).ready(function () {
-			$(function () {
-				// jquery typed plugin
-				$('.typed').typed({
-					stringsElement: $('.typed-strings'),
-					typeSpeed: 100,
-					backDelay: 500,
-					loop: true,
-					contentType: 'html', // or text
-					// defaults to false for infinite loop
-					loopCount: false,
-					callback: function () {
-						null;
-					},
-					resetCallback: function () {
-						newTyped();
-					},
-				});
-			});
-		});
-	</script>
+    <!-- Header Controls Start -->
+    <div class="header__controls d-flex justify-content-end">
+      <button id="color-switcher" class="color-switcher header__switcher btn" type="button" role="switch"
+        aria-label="light/dark mode" aria-checked="true"></button>
+      <a id="notify-trigger" class="header__trigger btn" href="#contact">
+        <span class="trigger__caption">Let's Talk</span>
+        <i class="ph-bold ph-chat-dots"></i>
+      </a>
+    </div>
+    <!-- Header Controls End -->
+
+  </header>
+  <!-- Header End -->
+  <!-- Header End -->
+
+  <!-- SVG Background Start -->
+  <div id="svgBackground" class="svg-background">
+    <!-- top svg item -->
+    <div class="background__svg01" data-speed="0.8">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="1000px" height="1000px"
+        viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+        <style type="text/css">
+          .bg01 {
+            fill: url(#color-gradient);
+          }
+        </style>
+        <radialGradient id="color-gradient" cx="418.5665" cy="225.9685" r="499.9326" fx="866.8251" fy="4.6162"
+          gradientTransform="matrix(-0.6935 0.7207 -0.7207 -0.6935 953.1126 355.0528)" gradientUnits="userSpaceOnUse">
+          <stop offset="0" style="stop-color:#5672cc" />
+          <stop offset="1" style="stop-color:#0f5996;stop-opacity:0" />
+        </radialGradient>
+        <circle class="bg01" cx="500" cy="500" r="500" />
+      </svg>
+    </div>
+    <!-- bottom svg item -->
+    <div class="background__svg02" data-speed="0.4">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="429.6px" height="429.6px"
+        viewBox="0 0 429.6 429.6" style="enable-background:new 0 0 429.6 429.6;" xml:space="preserve">
+        <style type="text/css">
+          .bg02 {
+            fill: url(#color-gradient-2);
+          }
+        </style>
+        <g id="Layer_1-2">
+          <radialGradient id="color-gradient-2" cx="2213.9312" cy="-11537.4219" r="214.85" fx="2393.6191"
+            fy="-11419.6494" gradientTransform="matrix(1.902285e-02 0.9998 0.9998 -1.954636e-02 11706.5303 -2223.4016)"
+            gradientUnits="userSpaceOnUse">
+            <stop offset="0" style="stop-color:#5672cc" />
+            <stop offset="1" style="stop-color:#0f5996;stop-opacity:0" />
+          </radialGradient>
+          <path class="bg02"
+            d="M63,63C146.9-21,282.9-21,366.8,62.9s83.8,219.9-0.1,303.8s-219.9,83.9-303.8,0.1S-20.9,146.9,63,63z" />
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- SVG Background End -->
+  <!-- Avatar Side Block Start -->
+  <div id="avatar" class="avatar">
+    <div class="avatar__container d-flex flex-column justify-content-lg-between">
+      <!-- image and logo -->
+      <div class="avatar__block">
+        <div class="avatar__logo d-flex align-items-center">
+          <div class="logo__image">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="85px" height="85px"
+              viewBox="0 0 940.99 662.52" xml:space="preserve" class="gradient-fill">
+              <style type="text/css">
+                .gradient-fill {
+                  fill: url(#gradientFill);
+                }
+              </style>
+              <g>
+                <linearGradient id="gradientFill" gradientUnits="userSpaceOnUse" x1="0" y1="662.52" x2="940.99" y2="0">
+                  <stop offset="0" style="stop-color:var(--accent)" />
+                  <stop offset="1" style="stop-color:var(--secondary)" />
+                </linearGradient>
+                <path class="gradient-fill"
+                  d="m0,395.36h181.29c63.38,0,123.3-28.9,162.76-78.49,0,0,252.12-316.87,252.12-316.87h-219.26c-39.39,0-76.63,17.96-101.16,48.78C275.76,48.78,0,395.36,0,395.36Z" />
+                <path class="gradient-fill"
+                  d="m571.51,267.16l-81.75,102.74c-9.15,11.51-21.7,19.58-35.63,23.24-5.54,1.45-11.3,2.21-17.14,2.21h-67.38l81.74-102.74c9.18-11.53,21.75-19.61,35.71-23.26.04-.02.08-.03.11-.03,5.48-1.42,11.17-2.16,16.95-2.16h67.39Z" />
+                <path class="gradient-fill"
+                  d="m940.99,267.16h-181.29c-63.38,0-123.3,28.9-162.76,78.49,0,0-252.12,316.87-252.12,316.87h219.26c39.39,0,76.63-17.96,101.16-48.78,0,0,275.76-346.57,275.76-346.57Z" />
+              </g>
+            </svg>
+            <!-- <img width="85px" height="85px" style="enable-background:new 0 0 85 85;" alt="" class="logo" src="img/avatars/logo.png"> -->
+          </div>
+          <div class="logo__caption">
+            <p>Samuel<br>Sihotang</p>
+          </div>
+        </div>
+        <div class="avatar__image">
+          <img src="img/avatars/avatar.png" alt="SamZ">
+        </div>
+      </div>
+      <!-- data caption #1 -->
+      <div class="avatar__block">
+        <h6>
+          <small class="top">Specialization:</small>
+          Software Engineer
+          <!-- <br>and frontend developer -->
+        </h6>
+      </div>
+      <!-- data caption #2 -->
+      <div class="avatar__block">
+        <h6>
+          <small class="top">Based in:</small>
+          Medan, Indonesia
+        </h6>
+      </div>
+      <!-- socials and CTA button -->
+      <div class="avatar__block">
+        <div class="avatar__socials">
+          <ul class="socials-square d-flex justify-content-between">
+            <li class="socials-square__item">
+              <a class="socials-square__link btn" href="https://www.linkedin.com/in/samuelsihotang1" target="_blank"><i
+                  class="ph-bold ph-linkedin-logo"></i></a>
+            </li>
+            <li class="socials-square__item">
+              <a class="socials-square__link btn" href="https://github.com/samuelsihotang1" target="_blank"><i
+                  class="ph-bold ph-github-logo"></i></a>
+            </li>
+            <li class="socials-square__item">
+              <a class="socials-square__link btn" href="https://www.instagram.com/samuelsihotang.id" target="_blank"><i
+                  class="ph-bold ph-instagram-logo"></i></a>
+            </li>
+            <li class="socials-square__item">
+              <a class="socials-square__link btn"
+                href="https://api.whatsapp.com/send?phone=62895612360693&text=Hi%2C%20Samuel.%20" target="_blank"><i
+                  class="ph-bold ph-whatsapp-logo"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="avatar__btnholder">
+          <a class="btn btn-default btn-fullwidth btn-hover btn-hover-accent"
+            href="documents/CV_SamuelChristyAngieSihotang.pdf" target="_blank">
+            <span class="btn-caption">Download CV</span>
+            <i class="ph-bold ph-download-simple"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Avatar Side Block End -->
+
+  <!-- Page Content Start -->
+  <div id="content" class="content">
+    <div class="content__wrapper">
+
+      <!-- Intro Section Start -->
+      <section id="home" class="main intro">
+
+        <!-- Headline Start -->
+        <div id="headline" class="headline d-flex align-items-start flex-column">
+          <!-- <a style="margin-bottom: 2rem;"
+            class="animate-headline headline__subtitle btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
+            href="#contact">
+            <span class="btn-caption">Let's Talk</span>
+            <i class="ph-bold ph-chat-dots"></i>
+          </a> -->
+          <h1 class="headline__title animate-headline">I'm Samuel Sihotang<br>- Software Engineer</h1>
+          <div class="headline__btnholder d-flex flex-column flex-sm-row">
+            <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent-mobile animate-headline"
+              href="#portfolio">
+              <span class="btn-caption">Check My Portfolio</span>
+              <i class="ph-bold ph-squares-four"></i>
+            </a>
+            <!-- <a class="btn mobile-vertical btn-default btn-hover btn-hover-outline-mobile animate-headline" href="#0">
+              <span class="btn-caption">Download CV</span>
+              <i class="ph-bold ph-download-simple"></i>
+            </a> -->
+          </div>
+        </div>
+        <!-- Headline End -->
+
+        <!-- Scroll Button Start -->
+        <div class="rotating-btn">
+          <a href="#portfolio" class="rotating-btn__link slide-down">
+            <!-- SVG rotating text -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 120 120" style="enable-background:new 0 0 120 120;" xml:space="preserve"
+              class="animate-rotation" data-value="360">
+              <defs>
+                <path id="textPath"
+                  d="M110,59.5c0,27.6-22.4,50-50,50s-50-22.4-50-50s22.4-50,50-50S110,31.9,110,59.5z" />
+              </defs>
+              <g>
+                <use xlink:href="#textPath" fill="none"></use>
+                <text>
+                  <!-- button text here!!! -->
+                  <textPath xlink:href="#textPath">Scroll for More * Scroll for More * </textPath>
+                </text>
+              </g>
+            </svg>
+            <!-- arrow icon -->
+            <i class="ph-bold ph-arrow-down"></i>
+          </a>
+        </div>
+        <!-- Scroll Button End -->
+
+      </section>
+      <!-- Intro Section End -->
+
+      <!-- Portfolio Section Start -->
+      <section id="portfolio" class="inner inner-first portfolio">
+
+        <!-- Content Block - H2 Section Title Start -->
+        <div class="content__block section-grid-title">
+          <p class="h2__subtitle animate-in-up">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>Portfolio</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Explore what I’ve been working on</h2>
+        </div>
+        <!-- Content Block - H2 Section Title End -->
+
+        <!-- Content Block - Works Gallery Start -->
+        <div class="content__block grid-block">
+          <div class="container-fluid px-0 inner__gallery">
+            <div class="row gx-0 my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/works/project1.png" data-image="img/works/project1.png" class="gallery__link"
+                  itemprop="contentUrl" data-size="1304x972">
+                  <img src="img/works/project1.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption class="gallery__descr" itemprop="caption description">
+                  <h5><a class="text-link-bold" href="https://github.com/samuelsihotang1/Mavie-Cinema"
+                      target="_blank">Mavie Cinema</a></h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Laravel</span>
+                    <span class="rounded-tag opposite">React</span>
+                    <span class="rounded-tag opposite">MySQL</span>
+                  </div>
+                  <p class="small">Developed a cinema website equipped with subscription and payment gateway features,
+                    running on FrankenPHP. Web application built with React and Laravel Framework.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/works/project2.png" data-image="img/works/project2.png" class="gallery__link"
+                  itemprop="contentUrl" data-size="1304x972">
+                  <img src="img/works/project2.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <h5><a class="text-link-bold" href="https://github.com/samuelsihotang1/Bebras-Help-Desk-Application"
+                      target="_blank">Bebras Help Desk Application</a></h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Laravel</span>
+                    <span class="rounded-tag">Livewire</span>
+                    <span class="rounded-tag">MySQL</span>
+                  </div>
+                  <p class="small">Developed a website-based forum that assists educators in discussing various topics,
+                    sharing knowledge, and engaging in mutual question-and-answer sessions.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/works/project3.png" data-image="img/works/project3.png" class="gallery__link"
+                  itemprop="contentUrl" data-size="1304x972">
+                  <img src="img/works/project3.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption class="gallery__descr opposite" itemprop="caption description">
+                  <h5><a class="text-link-bold" href="https://github.com/samuelsihotang1/Laundry-Del"
+                      target="_blank">Laundry Del</a></h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag">Laravel</span>
+                    <span class="rounded-tag">Livewire</span>
+                    <span class="rounded-tag">MySQL</span>
+                  </div>
+                  <p class="small">Developed a website that can help students and laundry staff find out information
+                    about all orders and student clothes.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+              <!-- Works Gallery Single Item Start -->
+              <figure class="col-12 col-md-6 gallery__item grid-item animate-card-2" itemprop="associatedMedia"
+                itemscope itemtype="http://schema.org/ImageObject">
+                <a href="img/works/project4.png" data-image="img/works/project4.png" class="gallery__link"
+                  itemprop="contentUrl" data-size="1304x972">
+                  <img src="img/works/project4.png" class="gallery__image" itemprop="thumbnail" alt="Image description">
+                </a>
+                <figcaption class="gallery__descr " itemprop="caption description">
+                  <h5><a class="text-link-bold" href="https://github.com/samuelsihotang1/Cafetaria"
+                      target="_blank">Cafetaria</a></h5>
+                  <div class="card__tags d-flex flex-wrap">
+                    <span class="rounded-tag opposite">Laravel</span>
+                    <span class="rounded-tag opposite">Livewire</span>
+                    <span class="rounded-tag opposite">MySQL</span>
+                  </div>
+                  <p class="small">Developed a website that can assist cafeteria operators in determining the ratings of
+                    the food menus they offer.
+                  </p>
+                </figcaption>
+              </figure>
+              <!-- Works Gallery Single Item End -->
+
+
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - Works Gallery End -->
+
+        <div class="content__block section-grid-title">
+
+          <div class="headline__btnholder d-flex flex-column flex-sm-row">
+            <a class="header__trigger btn" href="documents/Portfolio_SamuelChristyAngieSihotang.pdf" target="_blank">
+              <span class="btn-caption">Get All My Portfolio</span>
+              <i class="ph-bold ph-download-simple"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio Section End -->
+
+      <!-- About Section Start -->
+      <section id="about" class="inner about">
+        <!-- Content Block - H2 Section Title Start -->
+        <div class="content__block section-grid-title">
+          <p class="h2__subtitle animate-in-up">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>About Me</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Turning ideas into real applications</h2>
+        </div>
+        <!-- Content Block - H2 Section Title End -->
+
+        <!-- Content Block - Achievements Start -->
+        <div class="content__block grid-block">
+          <div class="achievements d-flex flex-column flex-md-row align-items-md-stretch">
+            <!-- achievements single item -->
+            <!-- <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">40+</p>
+                <p class="achievements__descr">Happy clients</p>
+              </div>
+            </div> -->
+            <!-- achievements single item -->
+            <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">1+</p>
+                <p class="achievements__descr">Years of experience</p>
+              </div>
+            </div>
+            <!-- achievements single item -->
+            <div class="achievements__item d-flex flex-column grid-item animate-card-3">
+              <div class="achievements__card">
+                <p class="achievements__number">7+</p>
+                <p class="achievements__descr">Projects done</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - Achievements End -->
+
+        <!-- Content Block - About Me Data Start -->
+        <div class="content__block grid-block block-large">
+          <div class="container-fluid p-0">
+            <div class="row g-0 justify-content-between">
+
+              <!-- About Me Description Start -->
+              <div class="col-12 col-xl-8 grid-item about-descr">
+                <p class="about-descr__text animate-in-up">
+                  I have worked on more than 7 development projects, gaining expertise across the full development
+                  lifecycle. My
+                  skills range from building secure back-end APIs and database integrations to developing responsive
+                  applications
+                  that support data management, reporting, automated email delivery, and payment gateway integration.
+                </p>
+                <div class="btn-group about-descr__btnholder animate-in-up">
+                  <a class="btn mobile-vertical btn-default btn-hover btn-hover-accent"
+                    href="documents/CV_SamuelChristyAngieSihotang.pdf">
+                    <span class="btn-caption">Download CV</span>
+                    <i class="ph-bold ph-download-simple"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- About Me Description End -->
+
+              <!-- About Me Information Start -->
+              <div class="col-12 col-xl-4 grid-item about-info">
+                <div class="about-info__item animate-in-up">
+                  <h6>
+                    <small class="top">Name</small>
+                    Samuel Sihotang
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6>
+                    <small class="top">Phone</small>
+                    <a class="text-link-bold"
+                      href="https://api.whatsapp.com/send?phone=62895612360693&text=Hi%2C%20Samuel.%20"
+                      target="_blank">+62 895-6123-60693</a>
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6>
+                    <small class="top">Email</small>
+                    <a class="text-link-bold" href="mailto:samsihotang1@gmail.com">samsihotang1@gmail.com</a>
+                  </h6>
+                </div>
+                <div class="about-info__item animate-in-up">
+                  <h6>
+                    <small class="top">Location</small>
+                    <a class="text-link-bold" href="https://maps.app.goo.gl/K3DPYqXmaRscto21A" target="_blank">Medan,
+                      Indonesia</a>
+                  </h6>
+                </div>
+              </div>
+              <!-- About Me Information End -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - About Me Data End -->
+
+
+      </section>
+      <!-- About Section End -->
+
+      <!-- Resume Section Start -->
+      <section id="resume" class="inner resume">
+
+        <!-- Content Block - H2 Section Title Start -->
+        <div class="content__block block-large">
+          <p class="h2__subtitle animate-in-up">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>Resume</span>
+          </p>
+          <h2 class="h2__title animate-in-up">Practical experience and education</h2>
+        </div>
+        <!-- Content Block - H2 Section Title End -->
+
+        <!-- Content Block - Experience Start -->
+        <div class="content__block block-large">
+
+          <!-- H3 Block Start -->
+          <div class="section-h3">
+            <h3 class="h3__title animate-in-up">Work experience</h3>
+          </div>
+          <!-- H3 Block End -->
+
+          <!-- Experience Lines Start -->
+          <div class="container-fluid p-0 resume-lines">
+            <!-- experience single item -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Aug 2024 - Jun 2025</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">IT Developer Intern</h5>
+                <p class="resume-lines__source animate-in-up">in the PT Tera Multi Wahana
+                </p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">Developed a robust API with C#/.NET, a Flutter-based
+                  web app, and a XAML desktop app for seamless data processing, reporting, and management.
+                </p>
+              </div>
+            </div>
+            <!-- experience single item -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Jun 2024 - Aug 2024</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">Backend Developer Intern</h5>
+                <p class="resume-lines__source animate-in-up">in the PT Infosys Solusi Terpadu
+                </p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">Engineered Java-based middleware on the Software AG
+                  platform with a data validation layer to ensure secure and reliable financial program operations.</p>
+              </div>
+            </div>
+            <!-- experience single item -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Jun 2023 - Aug 2023</span>
+              </div>
+              <div class="col-12 col-md-5">
+                <h5 class="resume-lines__title animate-in-up">Full-Stack Developer Interns</h5>
+                <p class="resume-lines__source animate-in-up">in the Bebras Biro Insitut Teknologi Del
+                </p>
+              </div>
+              <div class="col-12 col-md-5">
+                <p class="small resume-lines__descr animate-in-up">Designed and implemented clean UI/UX-based front-end
+                  pages and a back-end program to handle HTTP requests, APIs, and database interactions.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Experience Lines End -->
+
+        </div>
+        <!-- Content Block - Experience End -->
+
+        <!-- Content Block - Education Start -->
+        <div class="content__block block-large">
+
+          <!-- H3 Block Start -->
+          <div class="section-h3">
+            <h3 class="h3__title animate-in-up">My education</h3>
+          </div>
+          <!-- H3 Block End -->
+
+          <!-- Education Lines Start -->
+          <div class="container-fluid p-0 resume-lines">
+            <!-- education single item -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Sep 2021 - Sep 2025</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">Bachelor Degree in Information System, 3.65/4.00</h5>
+                <p class="resume-lines__source animate-in-up">Course by Del Institute of Technology
+                </p>
+              </div>
+            </div>
+            <!-- education single item -->
+            <div class="row g-0 resume-lines__item animate-in-up">
+              <div class="col-12 col-md-2">
+                <span class="resume-lines__date animate-in-up">Feb 2024 - Jun 2024</span>
+              </div>
+              <div class="col-12 col-md-10">
+                <h5 class="resume-lines__title animate-in-up">Certified Independent Study in Web Development & UI UX Design – MSIB</h5>
+                <p class="resume-lines__source animate-in-up">Course by Infinite Learning
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Education Lines End -->
+
+        </div>
+        <!-- Content Block - Education End -->
+
+
+        <!-- Content Block - H3 Block Start -->
+        <div class="content__block">
+          <div class="section-h3 section-h3-grid">
+            <h3 class="h3__title animate-in-up">My technical skills and tools</h3>
+          </div>
+        </div>
+        <!-- Content Block - H3 Block End -->
+
+        <!-- Content Block - Tools List Start -->
+        <div class="content__block grid-block block-large">
+          <!-- Tools List Start -->
+          <div class="tools-cards d-flex justify-content-start flex-wrap">
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-laravel.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Laravel</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-react.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">React JS</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-flutter.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Flutter</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-mysql.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">MySQL</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-tailwind.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Tailwind CSS</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-html.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">HTML5</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-css.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">CSS3</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-javascript.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Javascript</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-php.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">PHP</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-dart.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Dart</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-csharp.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">C#</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-net.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">.Net</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-livewire.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Livewire</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-java.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Java</h6>
+              </div>
+            </div>
+            <!-- tools simgle item -->
+            <div class="tools-cards__item d-flex grid-item-s animate-card-5">
+              <div class="tools-cards__card">
+                <img class="tools-cards__icon animate-in-up" src="img/icons/icon-golang.svg" alt="Tools Icon">
+                <h6 class="tools-cards__caption animate-in-up">Go</h6>
+              </div>
+            </div>
+          </div>
+          <!-- Tools List End -->
+        </div>
+        <!-- Content Block - Tools List End -->
+        
+
+
+      </section>
+      <!-- Resume Section End -->
+
+      <!-- Contact Section Start -->
+      <section id="contact" class="inner contact">
+
+        <!-- Content Block - H2 Section Title Start -->
+        <div class="content__block section-title">
+          <p class="h2__subtitle  animate-in-up">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13"
+              fill="currentColor">
+              <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
+                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
+                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z" />
+            </svg>
+            <span>Contact</span>
+          </p>
+          <h2 class="h2__title  animate-in-up">Let’s talk about how we can work together!</h2>
+        </div>
+        <!-- Content Block - H2 Section Title End -->
+
+        <!-- Content Block - Contact Form Start -->
+        <div class="content__block grid-block block-grid-large">
+          <div class="form-container">
+
+            <!-- Reply Messages Start -->
+            <div class="form__reply centered text-center">
+              <i class="ph-bold ph-smiley reply__icon"></i>
+              <p class="reply__title">Done!</p>
+              <span class="reply__text">Thanks for your message. I'll get back as soon as possible.</span>
+            </div>
+            <!-- Reply Messages End -->
+
+            <!-- Contact Form Start -->
+            <form class="form contact-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Hidden Required Fields -->
+              <input type="hidden" name="access_key" value="754bbd3f-45ce-49d3-88c0-49d2e7353397">
+              <input type="hidden" name="project_name" value="Portfolio">
+              <input type="hidden" name="admin_email" value="samsihotang1@gmail.com">
+              <input type="hidden" name="form_subject" value="Contact Form Message">
+              <!-- END Hidden Required Fields-->
+              <div class="container-fluid p-0">
+                <div class="row gx-0">
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="text" name="Name" placeholder="Your Name*" required>
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="text" name="Company" placeholder="Company Name">
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="email" name="E-mail" placeholder="Email Adress*" required>
+                  </div>
+                  <div class="col-12 col-md-6 form__item animate-in-up">
+                    <input type="tel" name="Phone" placeholder="Phone Number*" required>
+                  </div>
+                  <div class="col-12 form__item animate-in-up">
+                    <textarea name="Message" placeholder="A Few Words*" required></textarea>
+                  </div>
+                  <div class="col-12 form__item animate-in-up">
+                    <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
+                      <span class="btn-caption">Send Message</span>
+                      <i class="ph-bold ph-paper-plane-tilt"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- Contact Form End -->
+
+          </div>
+        </div>
+        <!-- Content Block - Contact Form End -->
+
+        <!-- Content Block - Socials Cards Start -->
+        <div class="content__block grid-block">
+          <div class="socials-cards d-flex justify-content-start flex-wrap">
+            <!-- socials item -->
+            <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+              <div class="socials-cards__card">
+                <i class="ph-bold ph-linkedin-logo"></i>
+                <a class="socials-cards__link" href="https://www.linkedin.com/in/samuelsihotang1" target="_blank"></a>
+              </div>
+            </div>
+            <!-- socials item -->
+            <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+              <div class="socials-cards__card">
+                <i class="ph-bold ph-github-logo"></i>
+                <a class="socials-cards__link" href="https://github.com/samuelsihotang1" target="_blank"></a>
+              </div>
+            </div>
+            <!-- socials item -->
+            <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+              <div class="socials-cards__card">
+                <i class="ph-bold ph-instagram-logo"></i>
+                <a class="socials-cards__link" href="https://www.instagram.com/samuelsihotang.id" target="_blank"></a>
+              </div>
+            </div>
+            <!-- socials item -->
+            <div class="socials-cards__item d-flex grid-item-s animate-card-5">
+              <div class="socials-cards__card">
+                <i class="ph-bold ph-whatsapp-logo"></i>
+                <a class="socials-cards__link"
+                  href="https://api.whatsapp.com/send?phone=62895612360693&text=Hi%2C%20Samuel.%20" target="_blank"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - Socials Cards End -->
+
+        <!-- Content Block - Teaser Start -->
+        <div class="content__block">
+          <div class="teaser">
+            <p class="teaser__text animate-in-up">Got a project in mind, curious about me, or just want to say hi?
+              <a class="text-link-bold" href="mailto:samsihotang1@gmail.com">Drop me a message</a>
+              and I’ll reply as soon as I can.
+            </p>
+          </div>
+        </div>
+        <!-- Content Block - Teaser End -->
+
+        <!-- Content Block - Contact Data Start -->
+        <div class="content__block">
+          <div class="container-fluid p-0 contact-lines animate-in-up">
+            <div class="row g-0 contact-lines__item">
+              <!-- data item -->
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Location</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold" href="https://maps.app.goo.gl/K3DPYqXmaRscto21A" target="_blank">Medan,
+                    Indonesia</a>
+                </p>
+              </div>
+              <!-- data item -->
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Phone</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold"
+                    href="https://api.whatsapp.com/send?phone=62895612360693&text=Hi%2C%20Samuel.%20"
+                    target="_blank">+62 895-6123-60693</a>
+                </p>
+              </div>
+              <!-- data item -->
+              <div class="col-12 col-md-4 contact-lines__data">
+                <p class="contact-lines__title animate-in-up">Email</p>
+                <p class="contact-lines__text animate-in-up">
+                  <a class="text-link-bold" href="mailto:samsihotang1@gmail.com">samsihotang1@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Block - Contact Data End -->
+
+      </section>
+      <!-- Contact Section End -->
+
+    </div>
+  </div>
+  <!-- Page Content End -->
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+      It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+      <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close link-s" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share link-s" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs link-s" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom link-s" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader-active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left link-s" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right link-s" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Load Scripts Start -->
+  <script src="js/libs.min.js"></script>
+  <script>
+    const content = document.querySelector('body');
+    const imgLoad = imagesLoaded(content);
+    imgLoad.on('done', instance => {
+      setTimeout(() => {
+        document.getElementById("svgBackground").classList.add("loaded");
+      }, "1000");
+    });
+  </script>
+  <script src="js/app.js"></script>
+  <script src="js/gallery-init.js"></script>
+  <!-- Load Scripts End -->
+
 </body>
-
 </html>
