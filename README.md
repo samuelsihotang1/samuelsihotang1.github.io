@@ -1,4 +1,4 @@
-# Samuel Sihotang's Portfolio
+# Samuel's Portfolio
 
 Welcome to the source code for my personal portfolio.
 
