@@ -65,9 +65,19 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // triggers when user clicks on thumbnail
     var onThumbnailsClick = function(e) {
         e = e || window.event;
-        e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
         var eTarget = e.target || e.srcElement;
+
+        // Let real project links (live site / source code) navigate normally.
+        // Only the thumbnail link itself should open the lightbox.
+        var anchorEl = closest(eTarget, function(el) {
+            return el.tagName && el.tagName.toUpperCase() === 'A';
+        });
+        if (anchorEl && anchorEl.className.indexOf('gallery__link') === -1) {
+            return true;
+        }
+
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
 
         // find root element of slide
         var clickedListItem = closest(eTarget, function(el) {
@@ -147,6 +157,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
         options = {
 
             showHideOpacity: true,
+
+            // no social sharing UI
+            shareEl: false,
 
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),

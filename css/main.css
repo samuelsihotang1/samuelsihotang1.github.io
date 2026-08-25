@@ -4283,3 +4283,67 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
+/* ------------------------------------------------
+   Project links (portfolio cards + lightbox caption)
+   ------------------------------------------------ */
+.project-links {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.project-links__btn {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  gap: 0.8rem;
+  height: 3.6rem;
+  padding: 0 1.7rem;
+  -moz-border-radius: var(--_radius-s);
+       border-radius: var(--_radius-s);
+  font: normal 500 1.4rem/1 var(--_font-default);
+  font-variant-numeric: lining-nums;
+  white-space: nowrap;
+  background-color: var(--base);
+  color: var(--t-bright);
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-links__btn i {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.project-links__btn:hover {
+  -webkit-transform: translateY(-3px);
+     -moz-transform: translateY(-3px);
+          transform: translateY(-3px);
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* primary call-to-action: the deployed, clickable product */
+.project-links__btn--live {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.project-links__btn--live:hover {
+  -webkit-filter: brightness(1.25);
+          filter: brightness(1.25);
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* keep the buttons readable inside the lightbox caption too */
+.pswp__caption__center .project-links {
+  margin-top: 1.8rem;
+}
