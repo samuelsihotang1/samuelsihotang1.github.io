@@ -78,6 +78,7 @@ $(function() {
   // Lenis Scroll Plugin Start
   // --------------------------------------------- //
   const lenis = new Lenis()
+  window.lenis = lenis;
   function raf(time) {
     lenis.raf(time)
     requestAnimationFrame(raf)
@@ -234,10 +235,11 @@ $(function() {
   // --------------------------------------------- //
   // Swiper Slider Start
   // --------------------------------------------- //
-  const toolsSlider = document.querySelector("tools-slider");
-  const testimonialsSlider = document.querySelector("testimonials-slider");
+  // Only build the sliders on pages that actually contain them.
+  const toolsSlider = document.querySelector(".swiper-tools");
+  const testimonialsSlider = document.querySelector(".swiper-testimonials");
 
-  if (!toolsSlider) {
+  if (toolsSlider) {
     const swiper = new Swiper('.swiper-tools', {
       spaceBetween: 20,
       autoplay: {
@@ -271,7 +273,7 @@ $(function() {
     });
   };
 
-  if (!toolsSlider) {
+  if (testimonialsSlider) {
     const swiper = new Swiper('.swiper-testimonials', {
       slidesPerView: 1,
       spaceBetween: 20,
