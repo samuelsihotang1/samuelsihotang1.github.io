@@ -4721,9 +4721,10 @@ body.work-modal-is-open {
     gap: 5rem;
   }
   .work-case__hero-info {
-    -ms-flex: 0 0 34%;
-        flex: 0 0 34%;
-    max-width: 34%;
+    -ms-flex: 0 0 36%;
+        flex: 0 0 36%;
+    max-width: 36%;
+    min-width: 0;
   }
   .work-case__media {
     -ms-flex: 1 1 auto;
@@ -4744,15 +4745,18 @@ body.work-modal-is-open {
   font: normal 800 4rem/1.05 var(--_font-accent);
   color: var(--t-bright);
   margin-bottom: 1rem;
+  /* long single words must wrap inside the column instead of running
+     underneath the screenshot */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
 }
 @media only screen and (min-width: 768px) {
   .work-case__title {
-    font-size: 5.4rem;
-  }
-}
-@media only screen and (min-width: 1600px) {
-  .work-case__title {
-    font-size: 6rem;
+    font-size: -moz-calc(2.6rem + 1.6vw);
+    font-size: clamp(3.4rem, 2.6rem + 1.6vw, 4.6rem);
   }
 }
 
