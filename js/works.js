@@ -31,7 +31,7 @@ var WORKS = [
       "Covered the codebase with 337 automated Pest tests, including a dedicated security-hardening suite.",
     ],
     stack:
-      "Laravel · PHP 8.3 · React · TypeScript · Vite · Tailwind CSS · MySQL · Pest · Vercel",
+      "Laravel · PHP 8.3 · React · TypeScript · Vite · Tailwind CSS · MySQL · Pest",
     insight:
       "This build is where I care most about contracts. One API, two very different consumers, and a test suite that lets me change the schema without guessing what breaks.",
     cover: "img/works/project-siniaja.png",
