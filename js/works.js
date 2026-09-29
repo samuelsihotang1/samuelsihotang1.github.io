@@ -7,6 +7,38 @@
 
 var WORKS = [
   {
+    slug: "habit-shaper",
+    title: "Habit Shaper",
+    type: "Habit Tracker Web App",
+    role: "Full Stack Developer",
+    categories: [
+      "Full-Stack Build",
+      "REST API",
+      "Auth & Security",
+      "Containerization",
+      "Automated Testing",
+    ],
+    summary:
+      "A lightweight habit tracker for building good habits and breaking bad ones, with daily check-ins, streaks, clean streaks, and goals.",
+    overview:
+      "A lightweight web app for building positive habits and breaking negative ones through daily tracking. Habits to build get a check-in streak and a weekly completion rate; habits to break get a clean streak that counts up on its own until a relapse is logged; goals ride on a habit's streak. It is a Fastify and TypeScript API behind a React single-page app, and the whole stack starts with one docker compose up.",
+    contributions: [
+      "Built a Fastify and TypeScript REST API and a React 19 SPA, served on one origin by nginx so the API needs no CORS setup.",
+      "Derived streaks, clean streaks, and weekly completion rates from a per-day log in each user's own time zone, so a relapse or a back-dated check-in is a single row change, never a drifting counter.",
+      "Implemented email-first sign-in, hand-written RFC 6238 TOTP two-factor authentication with replay protection and trusted browsers, and password reset proven by an authenticator code.",
+      "Hardened the API with argon2id password hashing, AES-256-GCM encrypted secrets, Redis-backed rate limits, and per-user query scoping on every read and write.",
+      "Shipped it as a single Docker Compose stack that generates its own secrets and applies migrations on boot, covered by 130+ automated tests.",
+    ],
+    stack:
+      "React 19 · TypeScript · Vite · Tailwind CSS · Node.js · Fastify · MySQL · Redis · Docker · nginx",
+    insight:
+      "The point was to keep a small product honest: nothing stored that can be derived, and the rule that keeps one account out of another's data pinned by tests proven to fail with the rule removed.",
+    cover: "img/works/project-habit-shaper.png",
+    coverSize: "2608x1944",
+    live: "https://habit.samz.my.id/",
+    repo: null,
+  },
+  {
     slug: "siniaja",
     title: "SiniAja!",
     type: "Link-in-Bio Platform",
