@@ -37,9 +37,17 @@
     <!-- Facebook Metadata End -->
 
     <!-- Template Styles Start -->
-    <link rel="stylesheet" href="css/loaders/loader.css" />
-    <link rel="stylesheet" type="text/css" href="css/plugins.css" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!-- site.min.css is generated from css/loaders/loader.css, css/plugins.css and
+         css/main.css (unused rules purged, icon font subset, minified). Edit those
+         files, then rebuild site.min.css. -->
+    <link
+      rel="preload"
+      href="fonts/Syne/Syne-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/site.min.css?v=20261002" />
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
@@ -267,7 +275,13 @@
             </div>
           </div>
           <div class="avatar__image">
-            <img src="img/avatars/avatar.jpeg" alt="Samuel Sihotang" />
+            <img
+              src="img/avatars/avatar.webp"
+              width="420"
+              height="420"
+              alt="Samuel Sihotang"
+              fetchpriority="high"
+            />
           </div>
         </div>
         <!-- data caption #1 -->
@@ -826,6 +840,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-angular.svg"
                     alt="Tools Icon"
                   />
@@ -837,6 +853,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-ionic.svg"
                     alt="Tools Icon"
                   />
@@ -848,6 +866,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-laravel.svg"
                     alt="Tools Icon"
                   />
@@ -859,6 +879,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-react.svg"
                     alt="Tools Icon"
                   />
@@ -870,6 +892,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-flutter.svg"
                     alt="Tools Icon"
                   />
@@ -881,6 +905,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-mysql.svg"
                     alt="Tools Icon"
                   />
@@ -892,6 +918,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-tailwind.svg"
                     alt="Tools Icon"
                   />
@@ -905,6 +933,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-html.svg"
                     alt="Tools Icon"
                   />
@@ -916,6 +946,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-css.svg"
                     alt="Tools Icon"
                   />
@@ -927,6 +959,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-javascript.svg"
                     alt="Tools Icon"
                   />
@@ -938,6 +972,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-typescript.svg"
                     alt="Tools Icon"
                   />
@@ -949,6 +985,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-php.svg"
                     alt="Tools Icon"
                   />
@@ -960,6 +998,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-dart.svg"
                     alt="Tools Icon"
                   />
@@ -971,6 +1011,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-csharp.svg"
                     alt="Tools Icon"
                   />
@@ -982,6 +1024,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-net.svg"
                     alt="Tools Icon"
                   />
@@ -993,6 +1037,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-livewire.svg"
                     alt="Tools Icon"
                   />
@@ -1004,6 +1050,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-java.svg"
                     alt="Tools Icon"
                   />
@@ -1015,6 +1063,8 @@
                 <div class="tools-cards__card">
                   <img
                     class="tools-cards__icon animate-in-up"
+                    loading="lazy"
+                    decoding="async"
                     src="img/icons/icon-golang.svg"
                     alt="Tools Icon"
                   />
@@ -1303,18 +1353,9 @@
     <!-- Work Case Study Popup End -->
 
     <!-- Load Scripts Start -->
-    <script src="js/libs.min.js"></script>
-    <script>
-      const content = document.querySelector("body");
-      const imgLoad = imagesLoaded(content);
-      imgLoad.on("done", (instance) => {
-        setTimeout(() => {
-          document.getElementById("svgBackground").classList.add("loaded");
-        }, "1000");
-      });
-    </script>
-    <script src="js/works.js?v=20260929"></script>
-    <script src="js/app.js"></script>
+    <script src="js/libs.min.js?v=20261002"></script>
+    <script src="js/works.js?v=20261002"></script>
+    <script src="js/app.js?v=20261002"></script>
     <!-- Load Scripts End -->
   </body>
 </html>

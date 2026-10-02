@@ -210,6 +210,23 @@
   -moz-transition: all var(--_animspeed-slow) ease-in-out;
   transition: all var(--_animspeed-slow) ease-in-out;
 }
+/* Safety net: hide the loader even if the scripts never run */
+.loader {
+  -webkit-animation: loader-fallback 0s linear 8s forwards;
+          animation: loader-fallback 0s linear 8s forwards;
+}
+@-webkit-keyframes loader-fallback {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes loader-fallback {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .loader.loaded {
   background-color: var(--base);
   opacity: 0;

@@ -33,7 +33,7 @@ var WORKS = [
       "React 19 · TypeScript · Vite · Tailwind CSS · Node.js · Fastify · MySQL · Redis · Docker · nginx",
     insight:
       "The point was to keep a small product honest: nothing stored that can be derived, and the rule that keeps one account out of another's data pinned by tests proven to fail with the rule removed.",
-    cover: "img/works/project-habit-shaper.png",
+    cover: "img/works/project-habit-shaper",
     coverSize: "2608x1944",
     live: "https://habit.samz.my.id/",
     repo: null,
@@ -66,7 +66,7 @@ var WORKS = [
       "Laravel · PHP 8.3 · React · TypeScript · Vite · Tailwind CSS · MySQL · Pest",
     insight:
       "This build is where I care most about contracts. One API, two very different consumers, and a test suite that lets me change the schema without guessing what breaks.",
-    cover: "img/works/project-siniaja.png",
+    cover: "img/works/project-siniaja",
     coverSize: "1304x972",
     live: "https://siniaja.samz.my.id/",
     repo: null,
@@ -97,7 +97,7 @@ var WORKS = [
       "Laravel · PHP · React · Vite · Docker · Laravel Octane · FrankenPHP · MySQL",
     insight:
       "Most of the value here came from the runtime, not the features. Moving the app onto Octane and FrankenPHP changed how the whole product felt under load.",
-    cover: "img/works/project1.png",
+    cover: "img/works/project1",
     coverSize: "1304x972",
     live: null,
     repo: "https://github.com/samuelsihotang1/Mavie-Cinema",
@@ -128,7 +128,7 @@ var WORKS = [
       "ASP.NET Core · C# · Entity Framework Core · React · Vite · Tailwind CSS · SQL Server · JWT",
     insight:
       "A deliberate exercise in layering. Keeping controllers, DTOs, and data access separate is what made the auth middleware easy to slot in later.",
-    cover: "img/works/project5.png",
+    cover: "img/works/project5",
     coverSize: "2608x1944",
     live: "https://netcore-app-samz.vercel.app",
     repo: "https://github.com/samuelsihotang1/transaction-w-auth",
@@ -158,7 +158,7 @@ var WORKS = [
     stack: "Laravel · PHP · Livewire · Alpine.js · Bootstrap · MySQL",
     insight:
       "Community products live or die on moderation. Building the admin side with the same care as the public side is the part that made this one usable.",
-    cover: "img/works/project2.png",
+    cover: "img/works/project2",
     coverSize: "1304x972",
     live: null,
     repo: "https://github.com/samuelsihotang1/Bebras-Help-Desk-Application",
@@ -187,7 +187,7 @@ var WORKS = [
     stack: "Laravel · PHP · Livewire · Tailwind CSS · MySQL",
     insight:
       "Two audiences, one door. Collapsing the sign-in flow into a single toggled page removed the most common support question before it existed.",
-    cover: "img/works/project3.png",
+    cover: "img/works/project3",
     coverSize: "1304x972",
     live: null,
     repo: "https://github.com/samuelsihotang1/Laundry-Del",
@@ -210,7 +210,7 @@ var WORKS = [
     stack: "Laravel · PHP · Livewire · Tailwind CSS · MySQL",
     insight:
       "A small product, but a clean demonstration of server-driven interactivity: no separate frontend, and still nothing reloads.",
-    cover: "img/works/project4.png",
+    cover: "img/works/project4",
     coverSize: "1304x972",
     live: null,
     repo: "https://github.com/samuelsihotang1/Cafetaria",
@@ -226,6 +226,30 @@ var WORKS = [
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  // Covers ship as <cover>-640.webp and <cover>-1280.webp (see coverSize for the ratio).
+  // The image stays hidden over a shimmering skeleton until it has loaded.
+  function coverImg(work, alt, sizes, lazy) {
+    var size = work.coverSize.split("x");
+    var height = Math.round((640 * size[1]) / size[0]);
+    return (
+      '<img class="skeleton-img" src="' +
+      escapeHtml(work.cover) +
+      '-640.webp" srcset="' +
+      escapeHtml(work.cover) +
+      "-640.webp 640w, " +
+      escapeHtml(work.cover) +
+      '-1280.webp 1280w" sizes="' +
+      sizes +
+      '" width="640" height="' +
+      height +
+      '" alt="' +
+      escapeHtml(alt) +
+      '"' +
+      (lazy ? ' loading="lazy"' : "") +
+      ' decoding="async" />'
+    );
   }
 
   function findWork(slug) {
@@ -256,11 +280,12 @@ var WORKS = [
         '" aria-label="View project details: ' +
         escapeHtml(work.title) +
         '">' +
-        '<img src="' +
-        escapeHtml(work.cover) +
-        '" alt="' +
-        escapeHtml(work.title) +
-        ' project cover" loading="lazy" decoding="async" />' +
+        coverImg(
+          work,
+          work.title + " project cover",
+          "(min-width: 1200px) 30vw, 100vw",
+          true
+        ) +
         '<span class="work-card__arrow" aria-hidden="true"><i class="ph-bold ph-arrow-up-right"></i></span>' +
         "</button>" +
         '<div class="work-card__body">' +
@@ -375,11 +400,12 @@ var WORKS = [
       '<i class="ph-bold ph-arrow-right"></i></button>' +
       "</div>" +
       '<figure class="work-case__media">' +
-      '<img src="' +
-      escapeHtml(work.cover) +
-      '" alt="' +
-      escapeHtml(work.title) +
-      ' screenshot" />' +
+      coverImg(
+        work,
+        work.title + " screenshot",
+        "(min-width: 1200px) 60vw, 100vw",
+        false
+      ) +
       visitBtn +
       "</figure>" +
       "</div>" +
@@ -505,6 +531,16 @@ var WORKS = [
   // --------------------------------------------- //
   // Work Case Study Popup End
   // --------------------------------------------- //
+
+  // Drop the skeleton once a cover has loaded (or failed, so it never shimmers forever).
+  function revealImage(event) {
+    var img = event.target;
+    if (img.classList && img.classList.contains("skeleton-img")) {
+      img.classList.add("is-loaded");
+    }
+  }
+  document.addEventListener("load", revealImage, true);
+  document.addEventListener("error", revealImage, true);
 
   renderWorksGrid();
 })();
