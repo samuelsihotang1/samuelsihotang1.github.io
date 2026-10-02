@@ -28,20 +28,22 @@ $(function() {
   gsap.registerPlugin(ScrollTrigger);
 
   // --------------------------------------------- //
-  // Loader & Loading Animation Start
+  // Loading Animation Start
   // --------------------------------------------- //
-  // Reveal the page as soon as the DOM and scripts are ready. Images load lazily
-  // behind skeletons, so the loader must not wait for them.
-  document.getElementById("loaderContent").classList.add("fade-out");
-  setTimeout(() => {
-    document.getElementById("loader").classList.add("loaded");
-  }, 300);
+  // There is no page loader: content is visible from the first paint. Elements
+  // already on screen when the scripts run keep showing instead of being hidden
+  // and re-animated (which would flicker); only those below the fold animate in.
+  const belowFold = (selector) => gsap.utils.toArray(selector).filter(
+    (element) => element.getBoundingClientRect().top >= window.innerHeight
+  );
+
   setTimeout(() => {
     document.getElementById("svgBackground").classList.add("loaded");
   }, 1000);
 
-  gsap.set(".animate-headline", {y: 50, opacity: 0});
-  ScrollTrigger.batch(".animate-headline", {
+  const headlines = belowFold(".animate-headline");
+  if (headlines.length) gsap.set(headlines, {y: 50, opacity: 0});
+  ScrollTrigger.batch(headlines, {
     interval: 0.1,
     batchMax: 4,
     duration: 6,
@@ -57,7 +59,7 @@ $(function() {
     onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
   });
   // --------------------------------------------- //
-  // Loader & Loading Animation End
+  // Loading Animation End
   // --------------------------------------------- //
 
   // --------------------------------------------- //
@@ -107,7 +109,7 @@ $(function() {
   // Scroll Animations Start
   // --------------------------------------------- //
   // Animation In Up
-  const animateInUp = document.querySelectorAll(".animate-in-up");
+  const animateInUp = belowFold(".animate-in-up");
   animateInUp.forEach((element) => {
     gsap.fromTo(element, {
       opacity: 0,
@@ -142,8 +144,9 @@ $(function() {
 
   // Animation Cards Stack
   // Grid 2x
-  gsap.set(".animate-card-2", {y: 100, opacity: 0});
-  ScrollTrigger.batch(".animate-card-2", {
+  const cards2 = belowFold(".animate-card-2");
+  if (cards2.length) gsap.set(cards2, {y: 100, opacity: 0});
+  ScrollTrigger.batch(cards2, {
     interval: 0.1,
     batchMax: 2,
     duration: 6,
@@ -160,8 +163,9 @@ $(function() {
   });
 
   // Grid 3x
-  gsap.set(".animate-card-3", {y: 50, opacity: 0});
-  ScrollTrigger.batch(".animate-card-3", {
+  const cards3 = belowFold(".animate-card-3");
+  if (cards3.length) gsap.set(cards3, {y: 50, opacity: 0});
+  ScrollTrigger.batch(cards3, {
     interval: 0.1,
     batchMax: 3,
     duration: 3,
@@ -178,8 +182,9 @@ $(function() {
   });
 
   // Grid 5x
-  gsap.set(".animate-card-5", {y: 50, opacity: 0});
-  ScrollTrigger.batch(".animate-card-5", {
+  const cards5 = belowFold(".animate-card-5");
+  if (cards5.length) gsap.set(cards5, {y: 50, opacity: 0});
+  ScrollTrigger.batch(cards5, {
     interval: 0.1,
     batchMax: 5,
     delay: 1000,
@@ -386,7 +391,8 @@ $(function() {
 const themeBtn = document.querySelector('.color-switcher');
 
 function getCurrentTheme(){
-  let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  // Light by default, whatever the system prefers; the visitor's own choice wins.
+  let theme = 'light';
   localStorage.getItem('template.theme') ? theme = localStorage.getItem('template.theme') : null;
   return theme;
 }

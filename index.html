@@ -1,9 +1,19 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" color-scheme="light">
   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Apply a saved dark/light choice before the first paint (light otherwise) -->
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("template.theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("color-scheme", savedTheme);
+        }
+      } catch (e) {}
+    </script>
 
     <!-- Page Title -->
     <title>Samuel's Portfolio</title>
@@ -47,20 +57,11 @@
       type="font/woff2"
       crossorigin
     />
-    <link rel="stylesheet" href="css/site.min.css?v=20261002" />
+    <link rel="stylesheet" href="css/site.min.css?v=20261002b" />
     <!-- Template Styles End -->
 
     <!-- Custom Browser Color Start -->
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#dcdce7"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#111111"
-    />
+    <meta name="theme-color" content="#dcdce7" />
     <meta name="msapplication-navbutton-color" content="#111111" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta
@@ -71,15 +72,6 @@
   </head>
 
   <body>
-    <!-- Loader Start -->
-    <div id="loader" class="loader">
-      <div id="loaderContent" class="loader__content">
-        <div class="loader__shadow"></div>
-        <div class="loader__box"></div>
-      </div>
-    </div>
-    <!-- Loader End -->
-
     <!-- Header Start -->
     <header id="header" class="header d-flex justify-content-between">
       <!-- Navigation Menu Start -->
@@ -281,6 +273,7 @@
               height="420"
               alt="Samuel Sihotang"
               fetchpriority="high"
+              onload="this.classList.add('is-loaded')"
             />
           </div>
         </div>
@@ -1355,7 +1348,7 @@
     <!-- Load Scripts Start -->
     <script src="js/libs.min.js?v=20261002"></script>
     <script src="js/works.js?v=20261002"></script>
-    <script src="js/app.js?v=20261002"></script>
+    <script src="js/app.js?v=20261002b"></script>
     <!-- Load Scripts End -->
   </body>
 </html>
