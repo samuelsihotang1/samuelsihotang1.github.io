@@ -68,7 +68,7 @@ var WORKS = [
       "The feature people want is the delete, and the delete is the dangerous part. Every design choice here exists so that a partial file or a wrong hash can never cost someone a photo.",
     cover: "img/works/project-photopho",
     coverSize: "2608x1944",
-    live: null,
+    live: "https://photopho.samz.my.id/",
     repo: null,
   },
   {
