@@ -7,6 +7,39 @@
 
 var WORKS = [
   {
+    slug: "siniaja",
+    title: "SiniAja!",
+    type: "Link-in-Bio Platform",
+    role: "Full Stack Developer",
+    categories: [
+      "Full-Stack Build",
+      "REST API",
+      "Auth & Security",
+      "Bilingual UI",
+      "Automated Testing",
+    ],
+    summary:
+      "A link-in-bio platform for creators and small businesses, with a public page and a no-code dashboard for links, media, a mini-shop, and polls.",
+    overview:
+      "A link-in-bio platform for creators, small businesses, and freelancers. Every user gets a public page plus a no-code dashboard to manage links, media, a mini-shop, and polls. It is built as an API-only Go (Gin) backend paired with a React and TypeScript single-page app, so the public page and the dashboard consume exactly the same contract.",
+    contributions: [
+      "Built an API-only Go backend with Gin and GORM serving 79 REST endpoints across 10 database tables.",
+      "Designed a config-driven block registry that renders every content block from polymorphic models, so new block types ship without schema changes.",
+      "Implemented token-based auth, Google Sign-In, and a hand-written RFC 6238 TOTP multi-factor flow with trusted-device tracking and per-route rate limiting.",
+      "Cut repeated database work on public profile loads with a settle-period payload cache invalidated by global write middleware.",
+      "Shipped a bilingual EN/ID interface with drag-and-drop link reordering.",
+      "Covered the backend with 65 automated Go tests, including authentication, validation, and security-hardening checks.",
+    ],
+    stack:
+      "Go · Gin · GORM · React · TypeScript · Vite · Tailwind CSS · MySQL",
+    insight:
+      "This build is where I care most about contracts. One API, two very different consumers, and a test suite that lets me change the schema without guessing what breaks.",
+    cover: "img/works/project-siniaja",
+    coverSize: "1304x972",
+    live: "https://siniaja.samz.my.id/",
+    repo: null,
+  },
+  {
     slug: "photopho",
     title: "Photopho",
     type: "Phone-to-Laptop Photo Transfer",
@@ -68,39 +101,6 @@ var WORKS = [
     cover: "img/works/project-habit-shaper",
     coverSize: "2608x1944",
     live: "https://habit.samz.my.id/",
-    repo: null,
-  },
-  {
-    slug: "siniaja",
-    title: "SiniAja!",
-    type: "Link-in-Bio Platform",
-    role: "Full Stack Developer",
-    categories: [
-      "Full-Stack Build",
-      "REST API",
-      "Auth & Security",
-      "Bilingual UI",
-      "Automated Testing",
-    ],
-    summary:
-      "A link-in-bio platform for creators and small businesses, with a public page and a no-code dashboard for links, media, a mini-shop, and polls.",
-    overview:
-      "A link-in-bio platform for creators, small businesses, and freelancers. Every user gets a public page plus a no-code dashboard to manage links, media, a mini-shop, and polls. It is built as an API-only Go (Gin) backend paired with a React and TypeScript single-page app, so the public page and the dashboard consume exactly the same contract.",
-    contributions: [
-      "Built an API-only Go backend with Gin and GORM serving 79 REST endpoints across 10 database tables.",
-      "Designed a config-driven block registry that renders every content block from polymorphic models, so new block types ship without schema changes.",
-      "Implemented token-based auth, Google Sign-In, and a hand-written RFC 6238 TOTP multi-factor flow with trusted-device tracking and per-route rate limiting.",
-      "Cut repeated database work on public profile loads with a settle-period payload cache invalidated by global write middleware.",
-      "Shipped a bilingual EN/ID interface with drag-and-drop link reordering.",
-      "Covered the backend with 65 automated Go tests, including authentication, validation, and security-hardening checks.",
-    ],
-    stack:
-      "Go · Gin · GORM · React · TypeScript · Vite · Tailwind CSS · MySQL",
-    insight:
-      "This build is where I care most about contracts. One API, two very different consumers, and a test suite that lets me change the schema without guessing what breaks.",
-    cover: "img/works/project-siniaja",
-    coverSize: "1304x972",
-    live: "https://siniaja.samz.my.id/",
     repo: null,
   },
   {
