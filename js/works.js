@@ -482,6 +482,8 @@ var WORKS = [
   var modal = document.getElementById("workModal");
   var modalBody = document.getElementById("workModalBody");
 
+  var scrollBeforeOpen = 0;
+
   function openWork(slug) {
     if (!modal || !modalBody) {
       return;
@@ -494,6 +496,7 @@ var WORKS = [
     modalBody.innerHTML =
       '<div class="work-case__inner">' + caseStudyMarkup(index) + "</div>";
     modalBody.scrollTop = 0;
+    scrollBeforeOpen = window.pageYOffset || document.documentElement.scrollTop || 0;
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("work-modal-is-open");
@@ -507,7 +510,8 @@ var WORKS = [
     }
   }
 
-  // Closing the popup always drops the visitor back at the top of the page.
+  // Closing the popup leaves the visitor where they were; only the contact
+  // button in the popup jumps elsewhere.
   function closeWork(target) {
     if (!modal || !modal.classList.contains("is-open")) {
       return;
@@ -519,7 +523,15 @@ var WORKS = [
     if (window.lenis) {
       window.lenis.start();
     }
-    goTo(target || "#home");
+    if (target) {
+      goTo(target);
+      return;
+    }
+    if (window.lenis && window.lenis.scrollTo) {
+      window.lenis.scrollTo(scrollBeforeOpen, { immediate: true });
+    } else {
+      window.scrollTo(0, scrollBeforeOpen);
+    }
   }
 
   function goTo(selector) {
