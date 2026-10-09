@@ -40,8 +40,8 @@ var WORKS = [
     repo: null,
   },
   {
-    slug: "photopho",
-    title: "Photopho",
+    slug: "snapshore",
+    title: "Snapshore",
     type: "Phone-to-Laptop Photo Transfer",
     role: "Software Engineer",
     categories: [
@@ -52,23 +52,24 @@ var WORKS = [
       "Automated Testing",
     ],
     summary:
-      "Moves photos from a phone to a laptop over a data cable or the same Wi-Fi, then deletes from the phone only what is proven safe on the laptop.",
+      "Moves photos from a phone to a laptop over a data cable or the same Wi-Fi, with no account or cloud, then deletes from the phone only what is proven safe on the laptop.",
     overview:
-      "Photopho moves photos and videos from a phone to a laptop over a data cable or the same Wi-Fi, then, if you want, deletes from the phone what is proven safe on the laptop. It is three native apps sharing one brand and one protocol: a Go and Wails desktop app for Windows and macOS, an Android app in Kotlin and Jetpack Compose, and an iPhone app in SwiftUI. The phone serves and the laptop fetches, so a hotspot or a picky network never blocks the transfer.",
+      "Snapshore moves photos and videos from a phone to a laptop over a data cable or the same Wi-Fi, then, if you want, deletes from the phone what is proven safe on the laptop. There is no account, no internet and no cloud in between. It is three native apps sharing one brand and one protocol: a Go and Wails desktop app for Windows and macOS, an Android app in Kotlin and Jetpack Compose, and an iPhone app in SwiftUI. The phone serves and the laptop fetches, so a hotspot or a picky network never blocks the transfer. On the laptop, the moved photos become a library to browse: a timeline, a world map of where they were taken, favourites and albums, all read from the files on disk.",
     contributions: [
       "Designed a versioned HTTPS protocol in which the phone serves its library and the laptop fetches it, with phones found by mDNS, a USB-tethering gateway probe, usbmux for iPhones on a cable, or a typed address.",
       "Built pairing on a typed code that both sides prove with PBKDF2 and HMAC, over self-signed TLS that the laptop pins after the first pairing.",
       "Streamed every file in chunks of at most 1 MiB with resume, flushed it to disk and matched its SHA-256 against the phone's before it counts as safe; only safe photos ever reach the system Trash or Recently Deleted, and only after the person confirms.",
       "Kept the phone side inside a 4 GB-RAM budget: 12,000 photos and a 3.75 GB 4K video moved off the emulator with the app peaking at 81.5 MB, every hash matching, and interrupted runs resuming without re-sending what was already copied.",
-      "Covered the engine and both phone servers with 180+ automated tests in Go, JUnit and XCTest, against a fake phone that is the protocol's reference implementation.",
+      "Turned the laptop into a photo library with a timeline that stays smooth across tens of thousands of photos and videos, and places read from each photo's GPS data and named offline from a city list bundled with the app.",
+      "Covered the engine and both phone servers with 280+ automated tests in Go, JUnit and XCTest, against a fake phone that is the protocol's reference implementation.",
     ],
     stack:
       "Go · Wails · React · TypeScript · Kotlin · Jetpack Compose · Swift · SwiftUI · TLS · mDNS",
     insight:
       "The feature people want is the delete, and the delete is the dangerous part. Every design choice here exists so that a partial file or a wrong hash can never cost someone a photo.",
-    cover: "img/works/project-photopho",
+    cover: "img/works/project-snapshore",
     coverSize: "2608x1944",
-    live: "https://photopho.samz.my.id/",
+    live: "https://snapshore.samz.my.id/",
     repo: null,
   },
   {
