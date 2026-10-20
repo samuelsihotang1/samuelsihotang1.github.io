@@ -24,11 +24,11 @@ var WORKS = [
       "A link-in-bio platform for creators, small businesses, and freelancers. Every user gets a public page plus a no-code dashboard to manage links, media, a mini-shop, and polls. It is built as an API-only Go (Gin) backend paired with a React and TypeScript single-page app, so the public page and the dashboard consume exactly the same contract.",
     contributions: [
       "Built an API-only Go backend with Gin and GORM serving 79 REST endpoints across 10 database tables.",
-      "Designed a config-driven block registry that renders every content block from polymorphic models, so new block types ship without schema changes.",
+      "Designed a config-driven registry that defines all 25 content block types in one JSON file, so a new block type ships with no migration, model, or table.",
       "Implemented token-based auth, Google Sign-In, and a hand-written RFC 6238 TOTP multi-factor flow with trusted-device tracking and per-route rate limiting.",
-      "Cut repeated database work on public profile loads with a settle-period payload cache invalidated by global write middleware.",
+      "Made every page paint from its last payload while revalidating behind it, served repeat public visits within 5 minutes without an API call, and dropped a creator's cached page on every successful write through one global middleware.",
       "Shipped a bilingual EN/ID interface with drag-and-drop link reordering.",
-      "Covered the backend with 65 automated Go tests, including authentication, validation, and security-hardening checks.",
+      "Covered it with 1,390+ automated tests: 60+ Go tests on the API, including authentication, validation, and security-hardening checks, and 1,330+ on the React app.",
     ],
     stack:
       "Go · Gin · GORM · React · TypeScript · Vite · Tailwind CSS · MySQL",
@@ -61,7 +61,7 @@ var WORKS = [
       "Streamed every file in chunks of at most 1 MiB with resume, flushed it to disk and matched its SHA-256 against the phone's before it counts as safe; only safe photos ever reach the system Trash or Recently Deleted, and only after the person confirms.",
       "Kept the phone side inside a 4 GB-RAM budget: 12,000 photos and a 3.75 GB 4K video moved off the emulator with the app peaking at 81.5 MB, every hash matching, and interrupted runs resuming without re-sending what was already copied.",
       "Turned the laptop into a photo library with a timeline that stays smooth across tens of thousands of photos and videos, and places read from each photo's GPS data and named offline from a city list bundled with the app.",
-      "Covered the engine and both phone servers with 280+ automated tests in Go, JUnit and XCTest, against a fake phone that is the protocol's reference implementation.",
+      "Covered the engine, the desktop UI and both phone apps with 680+ automated tests in Go, TypeScript, JUnit and XCTest, with the engine run against a fake phone that is the protocol's reference implementation.",
     ],
     stack:
       "Go · Wails · React · TypeScript · Kotlin · Jetpack Compose · Swift · SwiftUI · TLS · mDNS",
@@ -93,7 +93,7 @@ var WORKS = [
       "Derived streaks, clean streaks, and weekly completion rates from a per-day log in each user's own time zone, so a relapse or a back-dated check-in is a single row change, never a drifting counter.",
       "Implemented email-first sign-in, hand-written RFC 6238 TOTP two-factor authentication with replay protection and trusted browsers, and password reset proven by an authenticator code.",
       "Hardened the API with argon2id password hashing, AES-256-GCM encrypted secrets, Redis-backed rate limits, and per-user query scoping on every read and write.",
-      "Shipped it as a single Docker Compose stack that generates its own secrets and applies migrations on boot, covered by 130+ automated tests.",
+      "Shipped it as a single Docker Compose stack that generates its own secrets and applies migrations on boot, covered by 150+ automated tests.",
     ],
     stack:
       "React 19 · TypeScript · Vite · Tailwind CSS · Node.js · Fastify · MySQL · Redis · Docker · nginx",
@@ -103,150 +103,6 @@ var WORKS = [
     coverSize: "2608x1944",
     live: "https://habit.samz.my.id/",
     repo: null,
-  },
-  {
-    slug: "mavie-cinema",
-    title: "Mavie Cinema",
-    type: "Cinema Booking Platform",
-    role: "Full Stack Developer",
-    categories: [
-      "Full-Stack Build",
-      "Payments & Subscriptions",
-      "Containerization",
-      "Performance",
-    ],
-    summary:
-      "A cinema website with subscription and payment gateway features, modernised to Laravel 12 and served through Laravel Octane on FrankenPHP.",
-    overview:
-      "A cinema website equipped with subscription and payment gateway features. The application is built with the Laravel Framework and React, containerised with Docker, and served through Laravel Octane on FrankenPHP so that repeat requests skip the usual PHP bootstrap cost.",
-    contributions: [
-      "Upgraded the system from Laravel 9 to Laravel 12 for modernization.",
-      "Fully containerized the application with Docker for scalable, portable deployment.",
-      "Improved system performance with Laravel Octane and FrankenPHP integration.",
-      "Developed a subscription feature enabling recurring billing and user plan management.",
-      "Developed an integrated payment gateway supporting secure and reliable transactions.",
-    ],
-    stack:
-      "Laravel · PHP · React · Vite · Docker · Laravel Octane · FrankenPHP · MySQL",
-    insight:
-      "Most of the value here came from the runtime, not the features. Moving the app onto Octane and FrankenPHP changed how the whole product felt under load.",
-    cover: "img/works/project1",
-    coverSize: "1304x972",
-    live: null,
-    repo: "https://github.com/samuelsihotang1/Mavie-Cinema",
-  },
-  {
-    slug: "transaction-w-auth",
-    title: "Transaction w Auth",
-    type: "Transaction & Auth System",
-    role: "Full Stack Developer",
-    categories: [
-      "Full-Stack Build",
-      "REST API",
-      "Auth & Security",
-      "CI/CD",
-    ],
-    summary:
-      "A transaction platform on a .NET Core backend with a React frontend, managing products, orders, and user authentication end to end.",
-    overview:
-      "A transaction platform with an ASP.NET Core backend written in C# and a React, Vite, and Tailwind CSS frontend. The system manages products, orders, and user authentication end to end, and both halves of the stack ship through their own deployment pipeline.",
-    contributions: [
-      "Developed an ASP.NET Core backend API with a modular architecture of controllers, models, DTOs, DAOs, and interfaces for maintainability and scalability.",
-      "Integrated authentication and authorization middleware to secure API endpoints.",
-      "Implemented Entity Framework Core with migrations for database schema management and persistence.",
-      "Built a React and Vite frontend with Tailwind CSS, delivering a responsive and modern interface.",
-      "Configured CI/CD pipelines, with Vercel for the frontend and a .NET build pipeline for the backend.",
-    ],
-    stack:
-      "ASP.NET Core · C# · Entity Framework Core · React · Vite · Tailwind CSS · SQL Server · JWT",
-    insight:
-      "A deliberate exercise in layering. Keeping controllers, DTOs, and data access separate is what made the auth middleware easy to slot in later.",
-    cover: "img/works/project5",
-    coverSize: "2608x1944",
-    live: "https://netcore-app-samz.vercel.app",
-    repo: "https://github.com/samuelsihotang1/transaction-w-auth",
-  },
-  {
-    slug: "bebras-help-desk",
-    title: "Bebras Help Desk Application",
-    type: "Discussion Forum for Educators",
-    role: "Full Stack Developer",
-    categories: [
-      "Full-Stack Build",
-      "Community Forum",
-      "Notifications",
-      "Admin Panel",
-    ],
-    summary:
-      "A website-based forum where educators discuss topics, share knowledge, and answer each other's questions, with moderation tooling behind it.",
-    overview:
-      "A website-based forum that assists educators in discussing various topics, sharing knowledge, and engaging in mutual question-and-answer sessions. Alongside the public forum it carries the moderation tooling an open community needs: reporting, search, and an admin panel over everything members post.",
-    contributions: [
-      "Implemented CRUD functionality for questions, answers, and comments to support dynamic user interactions.",
-      "Developed follow and unfollow for users, plus topic associations for personalized engagement.",
-      "Developed an upvote and downvote system, a reporting mechanism, and question search.",
-      "Built notification and profile management modules with real-time website alerts and email delivery.",
-      "Developed an admin panel for managing user-generated content across questions, answers, and topics.",
-    ],
-    stack: "Laravel · PHP · Livewire · Alpine.js · Bootstrap · MySQL",
-    insight:
-      "Community products live or die on moderation. Building the admin side with the same care as the public side is the part that made this one usable.",
-    cover: "img/works/project2",
-    coverSize: "1304x972",
-    live: null,
-    repo: "https://github.com/samuelsihotang1/Bebras-Help-Desk-Application",
-  },
-  {
-    slug: "laundry-del",
-    title: "Laundry Del",
-    type: "Laundry Management System",
-    role: "Full Stack Developer",
-    categories: [
-      "Full-Stack Build",
-      "Role-Based Access",
-      "Admin Panel",
-      "Responsive UI",
-    ],
-    summary:
-      "A website that helps students and laundry staff track every order and clothing item, behind a single login that switches between both roles.",
-    overview:
-      "A website that helps students and laundry staff find out information about all orders and student clothes. Students submit and manage their own items, staff see every record, and both enter through one login page that toggles between the two roles without a redirect.",
-    contributions: [
-      "Developed a laundry listing feature allowing students to submit and manage their clothing items.",
-      "Built an admin panel enabling laundry staff to access all student laundry records.",
-      "Developed a unified login page with toggle-based role switching for students and staff, with no page redirection.",
-      "Implemented the entire front-end interface with Tailwind CSS for a responsive, modern UI.",
-    ],
-    stack: "Laravel · PHP · Livewire · Tailwind CSS · MySQL",
-    insight:
-      "Two audiences, one door. Collapsing the sign-in flow into a single toggled page removed the most common support question before it existed.",
-    cover: "img/works/project3",
-    coverSize: "1304x972",
-    live: null,
-    repo: "https://github.com/samuelsihotang1/Laundry-Del",
-  },
-  {
-    slug: "cafetaria",
-    title: "Cafetaria",
-    type: "Cafeteria Menu Rating App",
-    role: "Full Stack Developer",
-    categories: ["Full-Stack Build", "Voting System", "Livewire Components"],
-    summary:
-      "A website that helps cafeteria operators work out how their food menus are rated, with every interaction handled without a page refresh.",
-    overview:
-      "A website that assists cafeteria operators in determining the ratings of the food menus they offer. Operators manage the menu, diners vote on it, and every interaction runs through Livewire components so the page never has to reload.",
-    contributions: [
-      "Implemented create and delete functionality for food items to allow flexible content management.",
-      "Developed a food voting system with create and edit capabilities to enable user-driven ranking.",
-      "Integrated all interaction processes into Livewire components for a seamless experience without page refreshes.",
-    ],
-    stack: "Laravel · PHP · Livewire · Tailwind CSS · MySQL",
-    insight:
-      "A small product, but a clean demonstration of server-driven interactivity: no separate frontend, and still nothing reloads.",
-    cover: "img/works/project4",
-    coverSize: "1304x972",
-    live: null,
-    repo: "https://github.com/samuelsihotang1/Cafetaria",
   },
 ];
 
